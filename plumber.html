@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-analytics.js"></script>
+</head>
+
+<body>
+
+
+
+    <ul id="service-list"></ul>
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyB2EcwHyA7ZurA2JUhHE3oqH6VEX4wZKuE",
+            authDomain: "try1-50cba.firebaseapp.com",
+            databaseURL: "https://try1-50cba-default-rtdb.firebaseio.com",
+            projectId: "try1-50cba",
+            storageBucket: "try1-50cba.appspot.com",
+            messagingSenderId: "973923459653",
+            appId: "1:973923459653:web:289810cfd0aecdcf0f792c",
+            measurementId: "G-P90H7V4K97"
+        };
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const db = firebase.firestore();
+        db.settings({ timestampsInSnapshots: true });
+
+        
+    </script>
+    <script src="plumber.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-analytics.js"></script>
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+    <div class="content">
+        <h3>FindINblink</h3>
+        <form id="add-service-form">
+            <label>Service Type</label>
+            <div>
+                <select name="services" required >
+                    <label>
+                        <option> </option>
+                        <option>Doctor</option>
+                        <option>Electrician</option>
+                        <option>Plumber</option>
+            </div>
+            <div>
+                Name<input name="firstname" type="text" placeholder="firstname" id="myHeader" value="" required>
+                <input name="lastname" type="text" placeholder="lastname" id="#myHeader " value="" required>
+            </div>
+            <div>
+                Phone Number<input name="phonenumber" type="text" placeholder="phonenumber" id="#myHeader " value="" required>
+            </div>
+            <div>
+                Upload Profile Photo<input name="image" type="file" id="image" id="#myHeader " value="" required>
+            </div>
+            <div>
+                Address<input name="street" type="text" placeholder="street" id="#myHeader " value="">
+                <input name="city" type="text" placeholder="city" id="#myHeader " value="" required>
+                <input name="state" type="text" placeholder="state" id="#myHeader " value="" required>
+                <input name="zipcode" type="text" placeholder="zip code" id="#myHeader " value="" required>
+            </div>
+            <div>
+                E-mail<input name="email" type="text" placeholder="email" id="#myHeader " value="" required>
+            </div>
+            <button onclick="uploadImage()" type="submit" id="">submit data</button>
+        </form>
+        <button onclick="SearchA()" type="Search" id="">Doctor</button>
+        <button onclick="SearchB()" type="Search" id="">Electrician</button>
+        <button onclick="SearchC()" type="Search" id="">Plumber</button>
+        <ul id="service-list"></ul>
+    </div>
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyB2EcwHyA7ZurA2JUhHE3oqH6VEX4wZKuE",
+            authDomain: "try1-50cba.firebaseapp.com",
+            databaseURL: "https://try1-50cba-default-rtdb.firebaseio.com",
+            projectId: "try1-50cba",
+            storageBucket: "try1-50cba.appspot.com",
+            messagingSenderId: "973923459653",
+            appId: "1:973923459653:web:289810cfd0aecdcf0f792c",
+            measurementId: "G-P90H7V4K97"
+        };
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const db = firebase.firestore();
+        db.settings({ timestampsInSnapshots: true });
+    </script>
+    <script src="registrationForm.js"></script>
+</body>
+
+</html>
